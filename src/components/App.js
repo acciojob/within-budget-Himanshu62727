@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
+
   const itemsDetails = [
     { id: 1, name: "Apple", price: 20 },
     { id: 2, name: "Banana", price: 10 },
@@ -40,11 +41,11 @@ const App = () => {
         </thead>
         <tbody>
           {
-            itemsDetails.map((item) => (
-              <tr key={item.id}>
-                <td>{item.name}</td>
-                <td style={{color: item.price <= budget ? "green" : "red"}}>
-                  {item.price}
+            itemsDetails.map((myFruits) => (
+              <tr key={myFruits.id}>
+                <td>{myFruits.name}</td>
+                <td style={{color: myFruits.price<=budget && myFruits.price != 0 ? "green" : myFruits.price != 0 && myFruits.price ? "red" : "black"}}>
+                  {myFruits.price}
                 </td>
               </tr>
             ))
