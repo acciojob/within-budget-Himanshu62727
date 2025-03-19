@@ -34,6 +34,7 @@ const App = () => {
 
       <table>
         <tbody>
+          <thead>
           {
            itemsDetails.map((myFruits) => (
             <tr key={myFruits.id}>
@@ -42,6 +43,7 @@ const App = () => {
             </tr>
            ))
           }
+          </thead>
         </tbody>
       </table>
     </div>
